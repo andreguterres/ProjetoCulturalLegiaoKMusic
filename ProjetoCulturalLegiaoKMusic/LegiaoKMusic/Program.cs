@@ -1,7 +1,12 @@
+using LegiaoKMusic.Interface;
+using LegiaoKMusic.Servives;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IArtistaService, ArtistaService>();
+//IArtistaService, ArtistaService
 
 var app = builder.Build();
 
